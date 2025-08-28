@@ -15,7 +15,7 @@ Main application is in `src/main/scala`, tests in `src/test/scala` and `src/it/s
 - `TopItemsApp.scala`: Main Spark job
 - `TopItemsWithSaltingApp.scala`: Spark job with salting for skew handling
 
-All logic is tested with ScalaTest unit tests.
+Documentation(overview, design, join strategies) is in `docs/`.
 
 ---
 
