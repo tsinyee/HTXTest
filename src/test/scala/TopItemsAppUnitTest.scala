@@ -42,17 +42,17 @@ class TopItemsAppUnitTest extends AnyFunSuite with BeforeAndAfterAll {
     assert(dedupedA.collect().toSet == expected)
   }
 
-  test("aggregateByGeoId should sum counts correctly") {
+  test("aggregateByGeo should sum counts correctly") {
     val rdd = sc.parallelize(Seq(
-      (1001L, 1L),
-      (1001L, 2L),
-      (1002L, 3L)
+      ((1001L, "Apple"), 1L),
+      ((1001L, "Apple"), 2L),
+      ((1002L, "Banana"), 3L)
     ))
 
-    val result = TopItemsApp.aggregateByGeoId(rdd, _.sum).collect().toSet
+    val result = TopItemsApp.aggregateByGeo(rdd, _.sum).collect().toSet
     val expected = Set(
-      (1001L, 3L),
-      (1002L, 3L)
+      ((1001L, "Apple"), 3L),
+      ((1002L, "Banana"), 3L)
     )
 
     assert(result == expected)
