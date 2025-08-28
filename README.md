@@ -34,7 +34,7 @@ All logic is tested with ScalaTest unit tests.
 
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/tsinyee/HTXTest.git
    cd HTXTest
    ```
 2. Build the project:
