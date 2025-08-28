@@ -10,7 +10,7 @@ It demonstrates:
 - Aggregation and top-X selection per geo id
 - Joining with geo name metadata
 
-Main application is in `src/main/scala`, tests in `src/test/scala`.
+Main application is in `src/main/scala`, tests in `src/test/scala` and `src/it/scala`.
 
 - `TopItemsApp.scala`: Main Spark job
 - `TopItemsWithSaltingApp.scala`: Spark job with salting for skew handling
